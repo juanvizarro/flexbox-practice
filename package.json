@@ -7,7 +7,7 @@
     "watch:css": "npx tailwindcss -i ./scss/main.scss -o ./css/style.css --watch",
     "serve": "live-server .",
     "dev": "npm-run-all --parallel watch:css serve",
-    "build": "if exist dist rd /s /q dist && mkdir dist && npx tailwindcss -i ./scss/main.scss -o ./dist/style.css"
+    "build": "node build.js"
   },
   "keywords": [],
   "author": "",

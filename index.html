@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
-    <h1 class="page-title">Práctica Interactiva de Flexbox con Tailwind</h1>
+    <h1 class="page-title">Práctica Interactiva de Flexbox</h1>
 
     <div class="main-content">
 
@@ -17,6 +17,7 @@
                 <!-- Custom Select for flex-direction -->
                 <div>
                     <label class="select-label">flex-direction</label>
+                    <!-- <div id="flex-direction-hint" class="hint-badge mb-1"></div> -->
                     <div class="custom-select-wrapper" data-property="flex-direction">
                         <div class="custom-select-trigger">
                             <span>row</span>
@@ -37,6 +38,7 @@
                         <label class="select-label">justify-content</label>
                         <input type="checkbox" id="justify-content-toggle" data-property="justify-content" class="toggle-checkbox" checked>
                     </div>
+                    <div id="justify-content-hint" class="hint-badge mb-1"></div>
                     <div class="custom-select-wrapper" data-property="justify-content">
                         <div class="custom-select-trigger">
                             <span>start</span>
@@ -45,9 +47,9 @@
                             </div>
                         </div>
                         <ul class="custom-select-options hidden">
-                            <li class="custom-select-option selected" data-value="flex-start">start</li>
+                            <li class="custom-select-option selected" data-value="start">start</li>
                             <li class="custom-select-option" data-value="center">center</li>
-                            <li class="custom-select-option" data-value="flex-end">end</li>
+                            <li class="custom-select-option" data-value="end">end</li>
                             <li class="custom-select-option" data-value="space-between">space-between</li>
                             <li class="custom-select-option" data-value="space-around">space-around</li>
                             <li class="custom-select-option" data-value="space-evenly">space-evenly</li>
@@ -61,6 +63,7 @@
                         <label class="select-label">align-items</label>
                         <input type="checkbox" id="align-items-toggle" data-property="align-items" class="toggle-checkbox" checked>
                     </div>
+                    <div id="align-items-hint" class="hint-badge mb-1"></div>
                     <div class="custom-select-wrapper" data-property="align-items">
                         <div class="custom-select-trigger">
                             <span>start</span>
@@ -99,6 +102,11 @@
                     </button>
                 </div>
                 <pre class="code-block"><code id="css-code"></code></pre>
+            </div>
+
+            <div class="mt-6 p-4 bg-white rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-2">Explicación del Código</h2>
+                <div id="explanation-text" class="text-gray-700 leading-relaxed"></div>
             </div>
         </div>
     </div>
