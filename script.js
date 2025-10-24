@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">flex-direction: ${state['flex-direction']};</td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${mainAxisName}</td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Define la dirección del flujo</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${flexDirectionDesc}</td>
+            <td class="px-6 py-4 text-sm text-gray-500">${flexDirectionDesc}</td>
         </tr>
     `;
 
@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
             justifyContentDesc = `(Desactivado) Los elementos se alinean por defecto al inicio del Eje Principal.`;
         } else {
             switch (currentJustifyContent) {
-                case 'start': justifyContentAlignment = "Inicio"; justifyContentDesc = "Los elementos se agrupan al inicio del Eje Principal."; break;
-                case 'end': justifyContentAlignment = "Final"; justifyContentDesc = "Los elementos se agrupan al final del Eje Principal."; break;
+                case 'start': justifyContentAlignment = "Inicio"; justifyContentDesc = "Los elementos se alinean al inicio del Eje Principal."; break;
+                case 'end': justifyContentAlignment = "Final"; justifyContentDesc = "Los elementos se alinean al final del Eje Principal."; break;
                 case 'center': justifyContentAlignment = "Centro"; justifyContentDesc = "Los elementos se centran en el Eje Principal."; break;
                 case 'space-between': justifyContentAlignment = "Espacio entre"; justifyContentDesc = "Los elementos se distribuyen con espacio uniforme entre ellos, sin espacio en los extremos."; break;
                 case 'space-around': justifyContentAlignment = "Espacio alrededor"; justifyContentDesc = "Los elementos se distribuyen con espacio uniforme alrededor de ellos (incluyendo los extremos). "; break;
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">justify-content: ${currentJustifyContent};</td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${mainAxisName}</td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${justifyContentAlignment}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${justifyContentDesc}</td>
+            <td class="px-6 py-4 text-sm text-gray-500">${justifyContentDesc}</td>
         </tr>
     `;
 
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">align-items: ${currentAlignItems};</td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${crossAxisName}</td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${alignItemsAlignment}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${alignItemsDesc}</td>
+            <td class="px-6 py-4 text-sm text-gray-500">${alignItemsDesc}</td>
         </tr>
     `;
 
