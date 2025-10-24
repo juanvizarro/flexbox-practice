@@ -1,25 +1,30 @@
 import fs from "fs";
 import { execSync } from "child_process";
 
-// 🧹 Elimina la carpeta dist si existe
+// 🧹 1. Elimina la carpeta dist si existe
 if (fs.existsSync("dist")) {
   fs.rmSync("dist", { recursive: true, force: true });
 }
 
-// 🏗️ Crea carpeta dist/css (de forma segura y recursiva)
+// 🏗️ 2. Crea carpeta dist/css
 fs.mkdirSync("dist/css", { recursive: true });
 
-// 🪄 Ejecuta Tailwind para compilar el CSS final (minificado)
+// 🪄 3. Compila Tailwind CSS
 execSync("npx tailwindcss -i ./scss/main.scss -o ./dist/css/style.css --minify", {
   stdio: "inherit",
 });
 
-// 📁 Copia tu index.html y otros archivos necesarios
+// 📄 4. Copia archivos principales
 fs.copyFileSync("index.html", "dist/index.html");
 
-// (Opcional) Si tienes imágenes, JS u otros assets, puedes copiarlos así:
+// 🧠 5. Copia tu JavaScript
+if (fs.existsSync("script.js")) {
+  fs.copyFileSync("script.js", "dist/script.js");
+}
+
+// 🖼️ 6. (Opcional) Copia tus assets si existen
 if (fs.existsSync("assets")) {
   fs.cpSync("assets", "dist/assets", { recursive: true });
 }
 
-console.log("✅ Build completado correctamente. Archivos generados en /dist");
+console.log("✅ Build completado. Archivos generados en /dist");
