@@ -100,7 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'space-evenly': justifyContentAlignment = "Espacio equitativo"; justifyContentDesc = "Los elementos se distribuyen con espacio uniforme entre ellos y en los extremos."; break;
             }
         }
-        tableHtml += `
+        if (isJustifyContentEnabled) { // Only add row if enabled
+            tableHtml += `
         <tr>
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">justify-content: ${currentJustifyContent};</td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${mainAxisName}</td>
@@ -108,6 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <td class="px-6 py-4 text-sm text-gray-500">${justifyContentDesc}</td>
         </tr>
     `;
+        }
+
 
         // --- align-items ---
         const isAlignItemsEnabled = document.getElementById('align-items-toggle').checked;
@@ -126,7 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'baseline': alignItemsAlignment = "Línea base"; alignItemsDesc = "Los elementos se alinean según sus líneas base de texto en el Eje Secundario."; break;
             }
         }
-        tableHtml += `
+        if (isAlignItemsEnabled) { // Only add row if enabled
+            tableHtml += `
         <tr>
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">align-items: ${currentAlignItems};</td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${crossAxisName}</td>
@@ -134,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td class="px-6 py-4 text-sm text-gray-500">${alignItemsDesc}</td>
         </tr>
     `;
+        }
 
         tableHtml += `
     </tbody>

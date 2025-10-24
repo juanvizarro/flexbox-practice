@@ -7,10 +7,10 @@ if (fs.existsSync("dist")) {
 }
 
 // 🏗️ Crea carpeta dist
-fs.mkdirSync("dist");
+fs.mkdirSync("dist/css");
 
 // 🪄 Ejecuta Tailwind para compilar el CSS final
-execSync("npx tailwindcss -i ./scss/main.scss -o ./dist/style.css", {
+execSync("npx tailwindcss -i ./scss/main.scss -o ./dist/css/style.css", {
   stdio: "inherit"
 });
 
